@@ -15,8 +15,7 @@ SPS-Stereo is a dense stereo method employing a slanted plane model. It jointly 
 ### Building SPS-Stereo
 
 1. Prerequisites
-    * [libpng](http://www.libpng.org/pub/png/libpng.html)
-    * [png++](http://www.nongnu.org/pngpp/)
+    * opencv
 2. Building
     1. type 'cmake .'
     2. type 'make'
@@ -27,7 +26,14 @@ SPS-Stereo is a dense stereo method employing a slanted plane model. It jointly 
 First, download KITTI stereo/flow dataset from [KITTI Vision Benchmark Suite homepage](http://www.cvlibs.net/datasets/kitti/eval_stereo_flow.php?benchmark=stereo) and extract it.
 
 Run SPS-Stereo  
-`> ./spsstereo data_stereo_flow/training/image_0/000000_10.png data_stereo_flow/training/image_1/000000_10.png`
+`> ./spsstereo images.txt`
+
+where images.txt looks like:
+	left_image_1.png
+	right_image_1.png
+	..
+	left_image_N.png
+	right_image_N.png
 
 **Outputs**  
 
